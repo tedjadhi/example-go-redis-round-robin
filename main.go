@@ -47,7 +47,7 @@ func main() {
 	// Simulate multiple message sending requests
 	for i := 0; i < 100; i++ {
 		go func(i int) {
-			// Simulate lock phone number
+			// Simulate phone number limiter
 			time.Sleep(2000 * time.Millisecond)
 			rr.SetPhoneNumberLockLimited(ctx, "+6281234567890", 50*time.Minute)
 			rr.SetPhoneNumberLockLimited(ctx, "+6281234567891", 50*time.Minute)
